@@ -1,4 +1,11 @@
 body.hacker-theme {
+    /* ... other styles ... */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+body.hacker-theme {
     background-color: #1a1a1a;
     color: #b3e5fc;
     font-family: 'Fira Code', monospace;
