@@ -1,3 +1,23 @@
+body.hacker-theme header .contact a {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid #64ffda;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.hacker-theme header .contact a:hover {
+    background-color: #64ffda;
+    color: #1a1a1a;
+    transform: scale(1.05);
+}
+
+body.hacker-theme header .contact a i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
 body.hacker-theme {
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
