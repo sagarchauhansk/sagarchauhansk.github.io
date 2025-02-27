@@ -1,0 +1,192 @@
+body.hacker-theme {
+    background-color: #1a1a1a;
+    color: #b3e5fc;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background: linear-gradient(to bottom, #1a1a1a, #282828);
+}
+
+body.hacker-theme a {
+    color: #64ffda;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+body.hacker-theme a:hover {
+    color: #48c9b0;
+    text-shadow: 0 0 5px #48c9b0;
+}
+
+body.hacker-theme h1, h2 {
+    color: #f9f871;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(250, 248, 113, 0.5);
+}
+
+body.hacker-theme h2 {
+    border-bottom: 1px solid #f9f871;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+body.hacker-theme h2 i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+body.hacker-theme .card {
+    background: #282828;
+    border: 1px solid #64ffda;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.hacker-theme .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.5);
+}
+
+body.hacker-theme header {
+    background: #1a1a1a;
+    padding: 20px 0;
+    border-bottom: 1px solid #64ffda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.hacker-theme header .container {
+    text-align: center;
+}
+
+body.hacker-theme footer {
+    background: #121212;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #64ffda;
+}
+
+body.hacker-theme .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body.hacker-theme .skills-grid,
+body.hacker-theme .experience-list,
+body.hacker-theme .interests-grid,
+body.hacker-theme .education-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+body.hacker-theme .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+body.hacker-theme .fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.hacker-theme .glitch {
+    position: relative;
+    overflow: hidden;
+    animation: glitch 2s linear infinite;
+}
+
+@keyframes glitch {
+    2%, 64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%, 60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62% {
+        transform: translate(0, -2px) skew(5deg);
+    }
+}
+
+body.hacker-theme .glitch:before,
+body.hacker-theme .glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    overflow: hidden;
+}
+
+body.hacker-theme .glitch:before {
+    left: 2px;
+    text-shadow: -1px 0 red;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitchTop 1s linear infinite;
+}
+
+@keyframes glitchTop {
+    2%, 64% {
+        transform: translate(2px, -2px);
+    }
+    4%, 60% {
+        transform: translate(-2px, 2px);
+    }
+    62% {
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+body.hacker-theme .glitch:after {
+    left: -2px;
+    text-shadow: 1px 0 blue;
+    clip: rect(68px, 450px, 128px, 0);
+    animation: glitchBot 1.5s linear infinite;
+}
+
+@keyframes glitchBot {
+    2%, 64% {
+        transform: translate(-2px, 0);
+    }
+    4%, 60% {
+        transform: translate(-2px, 0);
+    }
+    62% {
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+body.hacker-theme .button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+body.hacker-theme .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #64ffda;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+body.hacker-theme .btn:hover {
+    background-color: #48c9b0;
+    transform: scale(1.05);
+}

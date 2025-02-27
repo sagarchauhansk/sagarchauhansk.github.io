@@ -1,0 +1,70 @@
+{
+  "name": "SAGAR CHAUHAN",
+  "address": "B-107, Sai Samarth Residency, Untiya, Kajapur, Vadodara - 391243",
+  "phone": "+91 7383668956",
+  "email": "sagarchauhansk@yandex.com",
+  "github": "sagarchauhansk.github.io",
+  "objective": "To secure a challenging role in a forward-thinking organization where I can leverage my skills to contribute to company success while pursuing professional growth.",
+  "education": [
+    {
+      "degree": "Industrial Training Institute (ITI) - Computer Operator & Programming Assistant (COPA)",
+      "percentage": "69.75%"
+    },
+    {
+      "degree": "Panchasheel High School - SSC",
+      "percentage": "49%"
+    }
+  ],
+  "skills": [
+    "Graphics & Web Design: Adobe Illustrator, Photoshop, UI/UX Principles",
+    "Social Media Marketing: Strategy, Execution & Analytics",
+    "Operating Systems: Windows Server, Linux (CentOS, Ubuntu), VMware vSphere",
+    "Networking: TCP/IP, DNS, DHCP, VPN, Firewall Configuration",
+    "Cloud Computing: AWS (EC2, S3, IAM), Azure (VMs, Storage)",
+    "Cybersecurity: IDS/IPS, Penetration Testing",
+    "Web Development: React, Angular, jQuery, Spring, Node.js",
+    "Database Management: MySQL, PostgreSQL, MongoDB"
+  ],
+  "experience": [
+    {
+      "company": "Khodaldham Trading",
+      "duration": "Feb 2022-Nov 2024",
+      "role": "Accountant & Supervisor"
+    },
+    {
+      "company": "Bufab India Pvt. Ltd.",
+      "duration": "May 2020-Jan 2022",
+      "role": "QC Dept."
+    },
+    {
+      "company": "Office Beacon",
+      "duration": "Nov 2019-Mar 2020",
+      "role": "Web Graphics Designer"
+    },
+    {
+      "company": "Concentrix",
+      "duration": "Jun 2019-Sep 2019",
+      "role": "SEO Content Development"
+    },
+    {
+      "company": "KV ONGC, Baroda",
+      "duration": "Dec 2018-Jun 2019",
+      "role": "Back Office Assistant"
+    }
+  ],
+  "languages": ["Gujarati", "Hindi", "English (Read, Write, Speak)"],
+  "interests": [
+    "Open-Source Contributions",
+    "Competitive Programming",
+    "Chess",
+    "Photography",
+    "Digital Illustration",
+    "Calligraphy",
+    "Movies",
+    "Reading"
+  ],
+  "activities": [
+    "Watching Shows, Movies & Documentaries",
+    "Traveling on Weekends"
+  ]
+}
