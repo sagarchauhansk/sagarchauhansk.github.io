@@ -1,12 +1,13 @@
-## 💻 Sagar Chauhan - Portfolio 🚀
+# 💻 Sagar Chauhan - Portfolio 🚀✨
 
 This repository hosts my professional portfolio website, accessible at [https://sagarchauhansk.github.io](https://sagarchauhansk.github.io).
 
 ## 👨‍💻 About Me
 
-I am Sagar Chauhan, a skilled professional specializing in **design and web graphics 🎨**, **digital marketing 📈**, **system administration ⚙️**, **networking 🌐**, **cloud computing ☁️**, **cybersecurity 🛡️**, **web application development 👨‍💻**, and **database management 💾**. My value is demonstrated through practical skills and experience.
+I am Sagar Chauhan, a skilled professional specializing in **design and web graphics 🎨✨**, **digital marketing 📈🚀**, **system administration ⚙️🔧**, **networking 🌐📡**, **cloud computing ☁️⚡**, **cybersecurity 🛡️🔒**, **web application development 👨‍💻💻**, and **database management 💾📊**. My value is demonstrated through practical skills and experience.
 
-**Location:** 📍 Vadodara, Gujarat, India 🇮🇳
+## Location
+📍 Vadodara, Gujarat, India 🇮🇳
 
 ## 🛠️ Technical Skills
 
@@ -71,5 +72,3 @@ This site is hosted on GitHub Pages. For more information, visit [https://pages.
 ## 📜 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
----
