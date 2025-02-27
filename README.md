@@ -1,23 +1,23 @@
-# 💻 Sagar Chauhan - Portfolio 🚀
+## 💻 Sagar Chauhan - Portfolio 🚀
 
-This repository hosts my personal portfolio website, accessible at [https://sagarchauhansk.github.io](https://sagarchauhansk.github.io).
+This repository hosts my professional portfolio website, accessible at [https://sagarchauhansk.github.io](https://sagarchauhansk.github.io).
 
 ## 👨‍💻 About Me
 
-I am Sagar Chauhan, a professional with a diverse skill set in **design and web graphics 🎨**, **digital marketing 📈**, **system administration ⚙️**, **networking 🌐**, **cloud computing ☁️**, **cybersecurity 🛡️**, **web application development 👨‍💻**, and **database management 💾**. I emphasize demonstrating proficiency through practical skills and experience.
+I am Sagar Chauhan, a skilled professional specializing in **design and web graphics 🎨**, **digital marketing 📈**, **system administration ⚙️**, **networking 🌐**, **cloud computing ☁️**, **cybersecurity 🛡️**, **web application development 👨‍💻**, and **database management 💾**. My value is demonstrated through practical skills and experience.
 
 **Location:** 📍 Vadodara, Gujarat, India 🇮🇳
 
-## 🛠️ Skills & Expertise
+## 🛠️ Technical Skills
 
--   **🎨 Design & Web Graphics:** Adobe Illustrator, Photoshop, UI/UX Principles
--   **📈 Digital Marketing:** Strategy, Execution & Analytics
--   **⚙️ System Administration:** Windows Server, Linux (CentOS, Ubuntu), VMware vSphere
--   **🌐 Networking:** TCP/IP, DNS, DHCP, VPN, Firewall Configuration
--   **☁️ Cloud Computing:** AWS (EC2, S3, IAM), Azure (VMs, Storage)
--   **🛡️ Cybersecurity:** IDS/IPS, Penetration Testing
--   **👨‍💻 Web Application Development:** React, Angular, jQuery, Spring, Node.js
--   **💾 Database Management:** MySQL, PostgreSQL, MongoDB
+-   **🎨 Design & Web Graphics:** Proficient in Adobe Illustrator, Photoshop, and UI/UX Principles.
+-   **📈 Digital Marketing:** Strategy, Execution, and Analytics.
+-   **⚙️ System Administration:** Windows Server, Linux (CentOS, Ubuntu), VMware vSphere.
+-   **🌐 Networking:** TCP/IP, DNS, DHCP, VPN, Firewall Configuration.
+-   **☁️ Cloud Computing:** AWS (EC2, S3, IAM), Azure (VMs, Storage).
+-   **🛡️ Cybersecurity:** IDS/IPS, Penetration Testing.
+-   **👨‍💻 Web Application Development:** React, Angular, jQuery, Spring, Node.js.
+-   **💾 Database Management:** MySQL, PostgreSQL, MongoDB.
 
 ## 💼 Professional Experience
 
@@ -42,11 +42,6 @@ I am Sagar Chauhan, a professional with a diverse skill set in **design and web 
 
 -   📺 Watching Shows, Movies & Documentaries
 -   🏞️ Traveling on Weekends
-
-## 🎓 Education
-
--   **🏫 Industrial Training Institute (ITI):** Computer Operator & Programming Assistant (COPA) - 69.75%
--   **🏫 Panchasheel High School:** SSC - 49%
 
 ## 🚀 Technologies Used
 
