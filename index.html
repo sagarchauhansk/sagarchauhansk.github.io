@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sagar Chauhan | Cybersecurity Specialist & Tech Entrepreneur</title>
+    <title>Sagar Chauhan | Portfolio</title>
     <style>
         :root {
             --bg: #0d1117;
@@ -11,7 +11,19 @@
             --accent: #58a6ff;
             --text: #c9d1d9;
             --text-dim: #8b949e;
+            --border: #30363d;
         }
+
+        /* Terminal Theme Variables */
+        .terminal-mode {
+            --bg: #050505;
+            --card-bg: #000000;
+            --accent: #39ff14;
+            --text: #39ff14;
+            --text-dim: #20c20e;
+            --border: #20c20e;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             background-color: var(--bg);
@@ -19,69 +31,144 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
         }
+
+        /* Mode Switcher Floating Action Button */
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--card-bg);
+            color: var(--accent);
+            border: 1px solid var(--border);
+            padding: 10px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: monospace;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
         header {
             max-width: 800px;
             margin: 0 auto;
-            padding: 4rem 2rem 2rem 2rem;
+            padding: 5rem 2rem 2rem 2rem;
             text-align: center;
         }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
+
+        h1, h2, h3 { color: #fff; }
+        .terminal-mode h1, .terminal-mode h2, .terminal-mode h3 { color: var(--accent); font-family: monospace; }
+        
         .subtitle { color: var(--accent); font-size: 1.2rem; font-weight: 500; margin-top: 0; }
         .container { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem 2rem; }
-        .section-title { font-size: 1.5rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; margin-top: 3rem; color: #fff; }
+        .section-title { font-size: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-top: 3rem; }
+        
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
         @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
-        .card { background-color: var(--card-bg); border: 1px solid #30363d; border-radius: 6px; padding: 1.5rem; }
-        .card h3 { margin-top: 0; color: #fff; }
+        
+        .card { background-color: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; }
         .card p { color: var(--text-dim); margin-bottom: 0; font-size: 0.95rem; }
-        .btn { display: inline-block; background-color: #21262d; color: var(--accent); border: 1px solid #30363d; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 1.5rem; transition: 0.2s; }
-        .btn:hover { background-color: #30363d; border-color: #8b949e; }
-        footer { text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.85rem; border-top: 1px solid #30363d; }
+        
+        /* Secure Contact Form Styling */
+        form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+        input, textarea {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 12px;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+        .terminal-mode input, .terminal-mode textarea { font-family: monospace; }
+        input:focus, textarea:focus { outline: 1px solid var(--accent); }
+        
+        .btn {
+            display: inline-block;
+            background-color: #21262d;
+            color: var(--accent);
+            border: 1px solid var(--border);
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+        }
+        .terminal-mode .btn { background-color: #000; font-family: monospace; }
+        .btn:hover { background-color: var(--border); color: #fff; }
+
+        /* Terminal Mode Specific Elements */
+        .term-prompt { display: none; font-family: monospace; color: var(--accent); margin: 10px 0; }
+        .terminal-mode .term-prompt { display: block; }
+
+        footer { text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 4rem; }
     </style>
 </head>
 <body>
 
+    <button id="theme-toggle" onclick="toggleTheme()">[ DOMAIN://GUI ]</button>
+
     <header>
+        <div class="term-prompt">sagarchauhan@root:~# ./display_identity.sh</div>
         <h1>Sagar Chauhan</h1>
-        <p class="subtitle">Computer Science Engineer & Certified Ethical Hacker</p>
-        <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">Founder & CEO of HaxaTronix. Specialising in secure system infrastructure, digital visual assets, and systematic financial market strategies.</p>
-        <a href="https://github.com" class="btn">Connect on GitHub</a>
+        <p class="subtitle">System Administrator & Cybersecurity Specialist</p>
+        <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">Specializing in infrastructure architecture, system administration, defensive networking, cloud frameworks, and digital creative operations.</p>
     </header>
 
     <div class="container">
-        <h2 class="section-title">Professional Expertise</h2>
+        <div class="term-prompt">sagarchauhan@root:~# cat skills.json</div>
+        <h2 class="section-title">Core Technical Capability</h2>
         <div class="grid">
             <div class="card">
-                <h3>💻 Cybersecurity</h3>
-                <p>Advanced penetration testing, proactive network vulnerability assessments, and robust enterprise infrastructure hardening protocols.</p>
+                <h3>🛡️ Cybersecurity & Networks</h3>
+                <p>Penetration testing, TCP/IP, DNS, VPN routing systems, firewall configuration, and infrastructure hardening frameworks.</p>
             </div>
             <div class="card">
-                <h3>🎨 Creative Technology</h3>
-                <p>Multi-layered vector graphics, digital brand architecture, and high-fidelity visual effects development.</p>
+                <h3>☁️ Cloud & SysAdmin</h3>
+                <p>Deployment automation using AWS (EC2, S3, IAM) and Azure ecosystems, along with Linux/Windows Server management.</p>
             </div>
             <div class="card">
-                <h3>🤖 AI & Automation</h3>
-                <p>Building automated workflow systems, custom micro-tools, and leveraging modern AI models for operational optimization.</p>
+                <h3>💻 Web Development</h3>
+                <p>Architecting production apps using full-stack patterns across React, Angular, Node.js, and multi-tier databases.</p>
             </div>
             <div class="card">
-                <h3>📈 FinTech Systems</h3>
-                <p>Developing, analyzing, and executing systematic proprietary strategy models within modern financial markets.</p>
+                <h3>🎨 Creative Architecture</h3>
+                <p>Advanced digital vector engineering, digital graphics production, UI/UX optimization, and strategic asset creation.</p>
             </div>
         </div>
 
-        <h2 class="section-title">Current Focus</h2>
-        <div style="margin-top: 1.5rem;">
-            <div style="margin-bottom: 1.5rem;">
-                <strong style="color: #fff;">Founder & CEO</strong> — HaxaTronix
-                <p style="margin: 0.25rem 0 0 0; color: var(--text-dim);">An independent technology framework focused on defensive technical architecture and security deployment.</p>
-            </div>
-        </div>
+        <!-- Secure Form Spree Integration -->
+        <div class="term-prompt">sagarchauhan@root:~# ./establish_secure_channel.sh</div>
+        <h2 class="section-title">Secure Communication Link</h2>
+        <p style="color: var(--text-dim);">Submit an anonymous encrypted note below. Your transmission routing details and actual email remain entirely masked.</p>
+        
+        <form action="https://formspree.io" method="POST">
+            <input type="text" name="name" placeholder="Alias / Name / Handle" required>
+            <input type="email" name="_replyto" placeholder="Return Secure Routing Mail (Optional)">
+            <textarea name="message" rows="5" placeholder="Enter your secure payload message here..." required></textarea>
+            <button type="submit" class="btn">Transmit Payload</button>
+        </form>
     </div>
 
     <footer>
-        &copy; 2026 Sagar Chauhan. All rights reserved.
+        &copy; 2026 Sagar Chauhan. All system connections log verified.
     </footer>
 
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('theme-toggle');
+            
+            body.classList.toggle('terminal-mode');
+            
+            if (body.classList.contains('terminal-mode')) {
+                btn.innerText = "[ DOMAIN://TERMINAL ]";
+            } else {
+                btn.innerText = "[ DOMAIN://GUI ]";
+            }
+        }
+    </script>
 </body>
 </html>
