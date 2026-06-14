@@ -12,9 +12,11 @@
             --text: #c9d1d9;
             --text-dim: #8b949e;
             --border: #30363d;
+            --success: #2ea44f;
+            --error: #f85149;
         }
 
-        /* Terminal Theme Variables */
+        /* Terminal Theme Overrides */
         .terminal-mode {
             --bg: #050505;
             --card-bg: #000000;
@@ -22,6 +24,8 @@
             --text: #39ff14;
             --text-dim: #20c20e;
             --border: #20c20e;
+            --success: #39ff14;
+            --error: #ff003c;
         }
 
         body {
@@ -34,7 +38,6 @@
             transition: background 0.3s, color 0.3s;
         }
 
-        /* Mode Switcher Floating Action Button */
         #theme-toggle {
             position: fixed;
             top: 20px;
@@ -71,7 +74,7 @@
         .card { background-color: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; }
         .card p { color: var(--text-dim); margin-bottom: 0; font-size: 0.95rem; }
         
-        /* Secure Contact Form Styling */
+        /* Form Architecture */
         form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
         input, textarea {
             background: var(--card-bg);
@@ -98,8 +101,24 @@
         }
         .terminal-mode .btn { background-color: #000; font-family: monospace; }
         .btn:hover { background-color: var(--border); color: #fff; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-        /* Terminal Mode Specific Elements */
+        /* Form Feedback Messaging styles */
+        .status-msg { font-size: 0.95rem; margin-top: 0.25rem; font-family: monospace; }
+        [data-fs-error] { color: var(--error); }
+        [data-fs-success] { 
+            color: var(--success); 
+            background: var(--card-bg); 
+            border: 1px solid var(--success);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        /* Helper structure to auto-display SDK messages */
+        [data-fs-success]:not(:empty) { display: block; }
+
         .term-prompt { display: none; font-family: monospace; color: var(--accent); margin: 10px 0; }
         .terminal-mode .term-prompt { display: block; }
 
@@ -114,7 +133,7 @@
         <div class="term-prompt">sagarchauhan@root:~# ./display_identity.sh</div>
         <h1>Sagar Chauhan</h1>
         <p class="subtitle">System Administrator & Cybersecurity Specialist</p>
-        <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">Specializing in infrastructure architecture, system administration, defensive networking, cloud frameworks, and digital creative operations.</p>
+        <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">Specialising in infrastructure architecture, system administration, defensive networking, cloud frameworks, and digital creative operations.</p>
     </header>
 
     <div class="container">
@@ -139,16 +158,26 @@
             </div>
         </div>
 
-        <!-- Secure Form Spree Integration -->
         <div class="term-prompt">sagarchauhan@root:~# ./establish_secure_channel.sh</div>
         <h2 class="section-title">Secure Communication Link</h2>
-        <p style="color: var(--text-dim);">Submit an anonymous encrypted note below. Your transmission routing details and actual email remain entirely masked.</p>
+        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Submit an anonymous note below. Your transmission routing details and private email remain fully masked.</p>
         
-        <form action="https://formspree.io" method="POST">
-            <input type="text" name="name" placeholder="Alias / Name / Handle" required>
-            <input type="email" name="_replyto" placeholder="Return Secure Routing Mail (Optional)">
-            <textarea name="message" rows="5" placeholder="Enter your secure payload message here..." required></textarea>
-            <button type="submit" class="btn">Transmit Payload</button>
+        <!-- Formspree Success Area -->
+        <div data-fs-success></div>
+        <div data-fs-error class="status-msg" style="margin-bottom: 1rem;"></div>
+
+        <!-- Integrated Formspree Form with SDK bindings -->
+        <form id="portfolio-contact-form">
+            <input type="text" id="sender-name" name="name" placeholder="Alias / Name / Handle" data-fs-field required>
+            <span data-fs-error="name" class="status-msg"></span>
+
+            <input type="email" id="sender-email" name="email" placeholder="Return Secure Routing Mail (Required)" data-fs-field required>
+            <span data-fs-error="email" class="status-msg"></span>
+
+            <textarea id="sender-message" name="message" rows="5" placeholder="Enter your secure payload message here..." data-fs-field required></textarea>
+            <span data-fs-error="message" class="status-msg"></span>
+
+            <button type="submit" class="btn" data-fs-submit-btn>Transmit Payload</button>
         </form>
     </div>
 
@@ -156,6 +185,14 @@
         &copy; 2026 Sagar Chauhan. All system connections log verified.
     </footer>
 
+    <!-- Formspree Async JavaScript SDK -->
+    <script>
+      window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+      formspree('initForm', { formElement: '#portfolio-contact-form', formId: 'xwvjavjo' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+    <!-- UI/UX Interactive Mode Switcher -->
     <script>
         function toggleTheme() {
             const body = document.body;
