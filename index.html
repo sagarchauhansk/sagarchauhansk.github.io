@@ -116,11 +116,34 @@
             display: none;
         }
 
-        /* Helper structure to auto-display SDK messages */
         [data-fs-success]:not(:empty) { display: block; }
 
+        /* --- TERMINAL LINE-BY-LINE ANIMATION LOGIC --- */
         .term-prompt { display: none; font-family: monospace; color: var(--accent); margin: 10px 0; }
+        
+        /* Elements to animate sequentially in Terminal Mode */
+        .terminal-mode .boot-item {
+            opacity: 0;
+            transform: translateY(4px);
+            animation: bootFadeIn 0.3s cubic-bezier(0.1, 1, 0.1, 1) forwards;
+        }
+
         .terminal-mode .term-prompt { display: block; }
+
+        /* Staggered Delay Intervals for Real-Time Cascade Effect */
+        .terminal-mode .delay-1 { animation-delay: 0.15s; }
+        .terminal-mode .delay-2 { animation-delay: 0.4s; }
+        .terminal-mode .delay-3 { animation-delay: 0.7s; }
+        .terminal-mode .delay-4 { animation-delay: 1.0s; }
+        .terminal-mode .delay-5 { animation-delay: 1.3s; }
+        .terminal-mode .delay-6 { animation-delay: 1.6s; }
+
+        @keyframes bootFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         footer { text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 4rem; }
     </style>
@@ -131,15 +154,15 @@
 
     <header>
         <div class="term-prompt">sagarchauhan@root:~# ./display_identity.sh</div>
-        <h1>Sagar Chauhan</h1>
-        <p class="subtitle">System Administrator & Cybersecurity Specialist</p>
-        <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">Specialising in infrastructure architecture, system administration, defensive networking, cloud frameworks, and digital creative operations.</p>
+        <h1 class="boot-item delay-1">Sagar Chauhan</h1>
+        <p class="subtitle boot-item delay-2">System Administrator & Cybersecurity Specialist</p>
+        <p class="boot-item delay-2" style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">Specialising in infrastructure architecture, system administration, defensive networking, cloud frameworks, and digital creative operations.</p>
     </header>
 
     <div class="container">
-        <div class="term-prompt">sagarchauhan@root:~# cat skills.json</div>
-        <h2 class="section-title">Core Technical Capability</h2>
-        <div class="grid">
+        <div class="term-prompt delay-3">sagarchauhan@root:~# cat skills.json</div>
+        <h2 class="section-title boot-item delay-3">Core Technical Capability</h2>
+        <div class="grid boot-item delay-4">
             <div class="card">
                 <h3>🛡️ Cybersecurity & Networks</h3>
                 <p>Penetration testing, TCP/IP, DNS, VPN routing systems, firewall configuration, and infrastructure hardening frameworks.</p>
@@ -158,16 +181,14 @@
             </div>
         </div>
 
-        <div class="term-prompt">sagarchauhan@root:~# ./establish_secure_channel.sh</div>
-        <h2 class="section-title">Secure Communication Link</h2>
-        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Submit an anonymous note below. Your transmission routing details and private email remain fully masked.</p>
+        <div class="term-prompt delay-5">sagarchauhan@root:~# ./establish_secure_channel.sh</div>
+        <h2 class="section-title boot-item delay-5">Secure Communication Link</h2>
+        <p class="boot-item delay-5" style="color: var(--text-dim); margin-bottom: 1.5rem;">Submit an anonymous note below. Your transmission routing details and private email remain fully masked.</p>
         
-        <!-- Formspree Success Area -->
         <div data-fs-success></div>
         <div data-fs-error class="status-msg" style="margin-bottom: 1rem;"></div>
 
-        <!-- Integrated Formspree Form with SDK bindings -->
-        <form id="portfolio-contact-form">
+        <form id="portfolio-contact-form" method="POST" class="boot-item delay-6">
             <input type="text" id="sender-name" name="name" placeholder="Alias / Name / Handle" data-fs-field required>
             <span data-fs-error="name" class="status-msg"></span>
 
@@ -190,7 +211,7 @@
       window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
       formspree('initForm', { formElement: '#portfolio-contact-form', formId: 'xwvjavjo' });
     </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    <script src="https://unpkg.com" defer></script>
 
     <!-- UI/UX Interactive Mode Switcher -->
     <script>
