@@ -1,170 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sagar Chauhan - Portfolio</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sagar Chauhan | Cybersecurity Specialist & Tech Entrepreneur</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --accent: #58a6ff;
+            --text: #c9d1d9;
+            --text-dim: #8b949e;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem 2rem;
+            text-align: center;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
+        .subtitle { color: var(--accent); font-size: 1.2rem; font-weight: 500; margin-top: 0; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem 2rem; }
+        .section-title { font-size: 1.5rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; margin-top: 3rem; color: #fff; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+        .card { background-color: var(--card-bg); border: 1px solid #30363d; border-radius: 6px; padding: 1.5rem; }
+        .card h3 { margin-top: 0; color: #fff; }
+        .card p { color: var(--text-dim); margin-bottom: 0; font-size: 0.95rem; }
+        .btn { display: inline-block; background-color: #21262d; color: var(--accent); border: 1px solid #30363d; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 1.5rem; transition: 0.2s; }
+        .btn:hover { background-color: #30363d; border-color: #8b949e; }
+        footer { text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.85rem; border-top: 1px solid #30363d; }
+    </style>
 </head>
-<body class="hacker-theme">
-    <div class="terminal-window">
-        <header>
-            <div class="container">
-                <h1 class="glitch" data-text="Sagar Chauhan">Sagar Chauhan</h1>
-                <p><i class="fas fa-map-marker-alt"></i> Vadodara, Gujarat, India</p>
-                <div class="contact">
-                    <a href="https://github.com/sagarchauhansk" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                </div>
+<body>
+
+    <header>
+        <h1>Sagar Chauhan</h1>
+        <p class="subtitle">Computer Science Engineer & Certified Ethical Hacker</p>
+        <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">Founder & CEO of HaxaTronix. Specialising in secure system infrastructure, digital visual assets, and systematic financial market strategies.</p>
+        <a href="https://github.com" class="btn">Connect on GitHub</a>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Professional Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>💻 Cybersecurity</h3>
+                <p>Advanced penetration testing, proactive network vulnerability assessments, and robust enterprise infrastructure hardening protocols.</p>
             </div>
-        </header>
-
-        <main class="container">
-            <section class="quote fade-in">
-                <p>
-                    <span role="img" aria-label="Brain">🧠</span> Don't assess my worth by my academic background, but rather by the tangible skills <span role="img" aria-label="Tools">🛠️</span> I possess.
-                </p>
-                <div class="button-container">
-                    <a href="#" class="btn">View Projects</a>
-                    <a href="#" class="btn">Download Resume</a>
-                </div>
-            </section>
-
-            <section class="skills fade-in">
-                <h2>>_ <i class="fas fa-terminal"></i> Skills & Expertise</h2>
-                <div class="skills-grid">
-                    <div class="card fade-in">
-                        <h3>Graphics & Web Design</h3>
-                        <p>Adobe Illustrator, Photoshop, UI/UX Principles</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Social Media Marketing</h3>
-                        <p>Strategy, Execution & Analytics</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Operating Systems</h3>
-                        <p>Windows Server, Linux (CentOS, Ubuntu), VMware vSphere</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Networking</h3>
-                        <p>TCP/IP, DNS, DHCP, VPN, Firewall Configuration</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Cloud Computing</h3>
-                        <p>AWS (EC2, S3, IAM), Azure (VMs, Storage)</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Cybersecurity</h3>
-                        <p>IDS/IPS, Penetration Testing</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Web Development</h3>
-                        <p>React, Angular, jQuery, Spring, Node.js</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Database Management</h3>
-                        <p>MySQL, PostgreSQL, MongoDB</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="experience fade-in">
-                <h2>>_ <i class="fas fa-briefcase"></i> Professional Experience</h2>
-                <div class="experience-list">
-                    <div class="card fade-in">
-                        <h3>Khodaldham Trading</h3>
-                        <p class="role">Accountant & Supervisor</p>
-                        <p class="duration">Feb 2022 - Nov 2024</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Bufab India Pvt. Ltd.</h3>
-                        <p class="role">QC Dept.</p>
-                        <p class="duration">May 2020 - Jan 2022</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Office Beacon</h3>
-                        <p class="role">Web Graphics Designer</p>
-                        <p class="duration">Nov 2019 - Mar 2020</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Concentrix</h3>
-                        <p class="role">SEO Content Development</p>
-                        <p class="duration">Jun 2019 - Sep 2019</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>KV ONGC, Baroda</h3>
-                        <p class="role">Back Office Assistant</p>
-                        <p class="duration">Dec 2018 - Jun 2019</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="languages fade-in">
-                <h2>>_ <i class="fas fa-language"></i> Languages</h2>
-                <p>Gujarati, Hindi, English (Read, Write, Speak)</p>
-            </section>
-
-            <section class="interests fade-in">
-                <h2>>_ <i class="fas fa-heart"></i> Interests</h2>
-                <div class="interests-grid">
-                    <div class="card fade-in">Open-Source Contributions</div>
-                    <div class="card fade-in">Competitive Programming</div>
-                    <div class="card fade-in">Chess</div>
-                    <div class="card fade-in">Photography</div>
-                    <div class="card fade-in">Digital Illustration</div>
-                    <div class="card fade-in">Calligraphy</div>
-                    <div class="card fade-in">Movies</div>
-                    <div class="card fade-in">Reading</div>
-                </div>
-            </section>
-
-            <section class="activities fade-in">
-                <h2>>_ <i class="fas fa-running"></i> Activities</h2>
-                <p>Watching Shows, Movies & Documentaries, Traveling on Weekends</p>
-            </section>
-
-            <section class="education fade-in">
-                <h2>>_ <i class="fas fa-graduation-cap"></i> Education</h2>
-                <div class="education-list">
-                    <div class="card fade-in">
-                        <h3>Industrial Training Institute (ITI)</h3>
-                        <p>Computer Operator & Programming Assistant (COPA) - 69.75%</p>
-                    </div>
-                    <div class="card fade-in">
-                        <h3>Panchasheel High School</h3>
-                        <p>SSC - 49%</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="container">
-                <p>&copy; 2025 Sagar Chauhan</p>
+            <div class="card">
+                <h3>🎨 Creative Technology</h3>
+                <p>Multi-layered vector graphics, digital brand architecture, and high-fidelity visual effects development.</p>
             </div>
-        </footer>
+            <div class="card">
+                <h3>🤖 AI & Automation</h3>
+                <p>Building automated workflow systems, custom micro-tools, and leveraging modern AI models for operational optimization.</p>
+            </div>
+            <div class="card">
+                <h3>📈 FinTech Systems</h3>
+                <p>Developing, analyzing, and executing systematic proprietary strategy models within modern financial markets.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Current Focus</h2>
+        <div style="margin-top: 1.5rem;">
+            <div style="margin-bottom: 1.5rem;">
+                <strong style="color: #fff;">Founder & CEO</strong> — HaxaTronix
+                <p style="margin: 0.25rem 0 0 0; color: var(--text-dim);">An independent technology framework focused on defensive technical architecture and security deployment.</p>
+            </div>
+        </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const fadeIns = document.querySelectorAll('.fade-in');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            fadeIns.forEach(fadeIn => {
-                observer.observe(fadeIn);
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('copy', function(e) {
-           e.preventDefault();
-           alert('Copying is disabled on this site.');
-       });
-    </script>
+
+    <footer>
+        &copy; 2026 Sagar Chauhan. All rights reserved.
+    </footer>
+
 </body>
 </html>
